@@ -38,4 +38,4 @@ def get_authentication_code() -> str:
     message = GMAIL.users().messages().get(userId=user_id, id=m_id).execute()
     mail_body = message["snippet"]
 
-    print(mail_body[6:12])
+    return mail_body[6:12]
